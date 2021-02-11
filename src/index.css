@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.image-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.image-container::after {
+  content: "";
+  flex: auto;
+}
+
+.image-wrap {
+  width: 350px;
+  height: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  cursor: pointer;
+  justify-content: space-between;
+  margin: 0 10px 10px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.btn {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.modal-wrap {
+  position: fixed;
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  overflow-y: auto;
+  width: calc(100% - 200px);
+  height: calc(100% - 100px);
+  border: 1px solid grey;
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-img-wrap {
+  width: 50%;
+  min-width: 500px;
+}
+
+.modal-img-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-close-btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.comments-wrap{
+  width: 45%;
+  min-width: 500px;
+  margin: 0 auto;
+}
+
+.comment-wrap{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.comment-user{
+  color: brown;
+  margin-bottom: 5px;
+}
+
+.comment-text{
+  padding: 10px;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .comments-wrap {
+    width: calc(100% - 20px);
+    min-width: calc(100% - 20px);
+    margin: 20px 0;
+  }
+  .modal-img-wrap {
+    width: 100%;
+    min-width: auto;
+  }
+}
